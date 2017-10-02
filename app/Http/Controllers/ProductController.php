@@ -106,7 +106,7 @@ class ProductController extends Controller
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
 
-        Stripe::setApiKey('sk_test_0E8DY1HaNyzd4txz1Tl7Iw3T');
+        Stripe::setApiKey('');
         try {
             $charge = Charge::create(array(
                 "amount" => $cart->totalPrice * 100,
